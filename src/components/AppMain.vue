@@ -9,7 +9,9 @@ export default{
         Cards
     },
     data(){
-        store
+        return{
+            store
+        }
     }
 }
 </script>
@@ -20,10 +22,10 @@ export default{
         <div class="ms-label">
             <h4>Found 62 characters</h4>
         </div>
-        <div class="row row-cols-md-5">
+        <div class="row row-cols-md-5 g-3">
             <div class="col" v-for="(item, index) in store.allCharacters" :key="index">
                 <Cards/>
-                <h1>{{item}}</h1>
+                
             </div>
         </div>
     </div>
