@@ -23,9 +23,8 @@ export default{
             <h4>Found 62 characters</h4>
         </div>
         <div class="row row-cols-md-5 g-3">
-            <div class="col" v-for="(item, index) in store.allCharacters" :key="index">
-                <Cards/>
-                
+            <div class="col" v-for="(charcter, index) in store.allCharacters" :key="index">
+                <Cards :name="charcter.name.toUpperCase()" :url="charcter.img" :status="charcter.status"/>
             </div>
         </div>
     </div>
@@ -52,12 +51,6 @@ export default{
 
     .row{
         padding: 1rem;
-        .col{
-            .ms-card{
-                background-color: $primary-color;
-                padding: .7rem;
-            }
-        }
     }
 }
 
