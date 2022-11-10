@@ -1,0 +1,9 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+
+$primary-color: #303A45;
+$secondary-color: #222529;
+
+body{
+    background-color: $primary-color;
+    color: white;
+}
