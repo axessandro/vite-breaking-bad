@@ -12,7 +12,19 @@ export default{
 
   data(){
     return{
-      store
+      store,
+    }
+  },
+  
+  methods:{
+    filterCharacters(){
+      if(this.store.filterOption){
+        const param = this.store.filterOption;
+        let apiUrl = `"https://www.breakingbadapi.com/api/characters"?category="${param}`;
+        axios.get(apiUrl).then((resp) =>{
+          this.store.allCharacters = resp.data;
+        })
+      }
     }
   },
 
@@ -21,11 +33,12 @@ export default{
       this.store.allCharacters = resp.data;
     });
   }
+
 }
 </script>
 
 <template>
-  <AppHeader/>
+  <AppHeader @filterApplied="filterCharacters"/>
   <AppMain/>
 </template>
 

@@ -24,7 +24,7 @@ export default{
         </div>
         <div class="row row-cols-md-5 g-3">
             <div class="col" v-for="(charcter, index) in store.allCharacters" :key="index">
-                <Cards :name="charcter.name.toUpperCase()" :url="charcter.img" :status="charcter.status"/>
+                <Cards :name="charcter.name.toUpperCase()" :url="charcter.img" :status="charcter.status" :series="charcter.category"/>
             </div>
         </div>
     </div>

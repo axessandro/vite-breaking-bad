@@ -12,6 +12,7 @@ export default{
         name: String,
         status: String,
         url: String,
+        series: String,
     }
 }
 </script>
@@ -23,7 +24,7 @@ export default{
     </div>
     <div class="identity">
         <h2>{{name}}</h2>
-        <h6>Breaking Bad</h6>
+        <h6>{{series}}</h6>
         <p>{{status}}</p>
 
     </div>
@@ -55,15 +56,18 @@ export default{
         h2{
             font-size: 1.2rem;
             padding-bottom: 1rem;
+            text-align: center;
         }
         h6{
             font-weight: 200;
             font-size: 1.5rem;
             opacity: .4;
+            text-align: center;
         }
         p{
             font-weight: 200;
             opacity: .4;
+            text-align: center;
         }
     }
 }
