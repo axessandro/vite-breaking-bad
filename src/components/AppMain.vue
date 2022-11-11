@@ -20,7 +20,7 @@ export default{
 <main>
     <div class="container">
         <div class="ms-label">
-            <h4>Found 62 characters</h4>
+            <h4>Found {{store.allCharacters.length}} characters</h4>
         </div>
         <div class="row row-cols-md-5 g-3">
             <div class="col" v-for="(charcter, index) in store.allCharacters" :key="index">

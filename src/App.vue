@@ -20,7 +20,8 @@ export default{
     filterCharacters(){
       if(this.store.filterOption){
         const param = this.store.filterOption;
-        let apiUrl = `"https://www.breakingbadapi.com/api/characters"?category="${param}`;
+        let apiUrl = `https://www.breakingbadapi.com/api/characters?category=${param}`;
+        console.log(apiUrl);
         axios.get(apiUrl).then((resp) =>{
           this.store.allCharacters = resp.data;
         })
